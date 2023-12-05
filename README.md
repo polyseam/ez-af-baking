@@ -1,8 +1,9 @@
+<center>
 <img src="./docs/img/ez-af-baker.png" height="300" />
 <br/>
 <br/>
 
-<center><h1>Easy AF Baking</h1>
+<h1>Easy AF Baking</h1>
 for baking Airflow images with custom dependencies
 </center>
 
