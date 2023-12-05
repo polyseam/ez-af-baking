@@ -1,6 +1,5 @@
-<center>
-<img src="./docs/img/ez-af-baker.png"/>
-</center>
+<img src="./docs/img/ez-af-baker.png" height="400" width="1200"/>
+
 <br/>
 <br/>
 
