@@ -1,12 +1,57 @@
-# Airflow Container Builder
+![Easy AF Baking](./docs/img/easy-af-baking.png)
 
-### usage
+<center><h1>Easy AF Baking</h1>
+for baking Airflow images with custom dependencies
+</center>
 
-1. click green `Use this template` button above
-2. add your dependencies to `requirements.txt`
-3. run `git tag v1.0.0` to build an image
-4. run `git push --tags` to publish that image
-5. the published image will appear to the right of your repo on github
-6. to update your image, modify your `requirements.txt` and create a fresh tag
-7. `git tag v1.0.1`
-8. push the tag to publish the new image  `git push --tags`
+## Usage
+
+### Setup Repo
+
+Click the
+[Use this template](https://github.com/new?template_name=easy-af-baking&template_owner=polyseam)
+button!
+
+### Set Requirements
+
+1. Pull down the repo
+2. Add your dependencies to `requirements.txt`
+
+### Push Code to GitHub
+
+1. `git add .`
+2. `git commit -m "added dependencies"`
+3. `git push`
+
+### Publish Image to the Container Registry
+
+Automation will publish your image when you push a tag to the repo.
+
+1. run `git tag v1.0.0` to designate an image version
+2. run `git push --tags` to publish that version
+3. the published repos shouls be shown over there ↗️
+
+### using the image in Airflow Kubernetes (optional)
+
+Now that you have an image in the [GitHub Container Registry](https://ghcr.io),
+you need to be able to consume it from Airflow.
+
+If you are using Polyseam's [CNDI](https://github.com/polyseam/cndi), here is
+[an example here showing how to securely apply that secret for your Airflow Container Image](./docs/examples/cndi).
+
+There is also an
+[example provided here](./docs/examples/plain/registry-secret.yaml) if you are
+using Airflow on Kubernetes without CNDI.
+
+In either case once you've applied the Secret you just need to tell Airflow to
+use it in your Helm Chart's values:
+
+```yaml
+values:
+  registry:
+    secretName: airflow-image-pull-secret
+  images:
+    airflow:
+      repository: 'ghcr.io/johnstonmatt/my-baked-image'
+      tag: v1.0.0
+```
