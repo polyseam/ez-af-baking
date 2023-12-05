@@ -40,12 +40,12 @@ Automation will publish your image when you push a tag to the repo.
 Now that you have an image in the [GitHub Container Registry](https://ghcr.io),
 you need to be able to consume it from Airflow.
 
-If you are using Polyseam's [CNDI](https://github.com/polyseam/cndi), here is
-[an example here showing how to securely apply that secret for your Airflow Container Image](./docs/examples/cndi).
+- If you are using Polyseam's [CNDI](https://github.com/polyseam/cndi), here is
+  [an example here showing how to securely apply that secret for your Airflow Container Image](./docs/examples/cndi).
 
-There is also an
-[example provided here](./docs/examples/plain/registry-secret.yaml) if you are
-using Airflow on Kubernetes without CNDI.
+- There is also an
+  [example provided here](./docs/examples/plain/registry-secret.yaml) if you are
+  using Airflow on Kubernetes without CNDI.
 
 In either case once you've applied the Secret you just need to tell Airflow to
 use it in your Helm Chart's values:
