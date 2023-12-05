@@ -2,7 +2,7 @@
 
 ### usage
 
-1. click `Use this template`
+1. click green `Use this template` button above
 2. add your dependencies to `requirements.txt`
 3. run `git tag v1.0.0` to build an image
 4. run `git push --tags` to publish that image
