@@ -4,7 +4,7 @@
 <br/>
 
 <center>
-<h1>Easy AF Baking</h1>
+<h1>EZ AF Baking</h1>
 for baking Airflow images with custom dependencies
 </center>
 
@@ -13,7 +13,7 @@ for baking Airflow images with custom dependencies
 ### Setup Repo
 
 Click the
-[Use this template](https://github.com/new?template_name=easy-af-baking&template_owner=polyseam)
+[Use this template](https://github.com/new?template_name=ez-af-baking&template_owner=polyseam)
 button!
 
 ### Set Requirements
