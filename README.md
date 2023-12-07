@@ -33,7 +33,7 @@ Automation will publish your image when you push a tag to the repo.
 
 1. run `git tag v1.0.0` to designate an image version
 2. run `git push --tags` to publish that version
-3. the published repos shouls be shown over there ↗️
+3. the published images should be shown in the GitHub packages tab over there ↗️
 
 ### using the image in Airflow Kubernetes (optional)
 
